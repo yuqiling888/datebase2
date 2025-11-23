@@ -87,5 +87,28 @@ namespace StudentManager
             }
 
         }
+
+        private void txtLoginId_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyValue == 13)
+            {
+                if (this.txtLoginId.TextLength != 0)
+                {
+                    this.txtLoginPwd.Focus();
+                }
+            }
+
+        }
+
+        private void txtLoginPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyValue==13)
+            {
+                if(this.txtLoginPwd.TextLength!=0)
+                {
+                    btnLogin_Click_1(null, null);
+                }
+            }
+        }
     }
 }

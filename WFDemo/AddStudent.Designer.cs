@@ -29,19 +29,19 @@ namespace StudentManager
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbStudetName = new System.Windows.Forms.TextBox();
             this.lblStudenName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbStudetName
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(199, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
-            this.textBox1.TabIndex = 0;
+            this.tbStudetName.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbStudetName.Location = new System.Drawing.Point(199, 59);
+            this.tbStudetName.Name = "tbStudetName";
+            this.tbStudetName.Size = new System.Drawing.Size(100, 26);
+            this.tbStudetName.TabIndex = 0;
             // 
             // lblStudenName
             // 
@@ -79,9 +79,10 @@ namespace StudentManager
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblStudenName);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbStudetName);
             this.Name = "AddStudent";
             this.Text = "AddStudent";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddStudent_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,7 +90,7 @@ namespace StudentManager
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbStudetName;
         private System.Windows.Forms.Label lblStudenName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox2;

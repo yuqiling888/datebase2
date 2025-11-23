@@ -24,6 +24,7 @@ namespace StudentManager
 
 
         }
+        public static AddStudent objFrmAddStudent = null;
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -52,6 +53,18 @@ namespace StudentManager
         private void label1_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            if (objFrmAddStudent == null)   //如果创建的静态变量为空，即没有创建的对象实体
+            {
+                objFrmAddStudent = new AddStudent();        //新建一个对象实体
+                objFrmAddStudent.Show();     //显示实体
+            }
+            else   //否则
+                objFrmAddStudent.Activate();    //激活这个实体，即此时为最小化状态
+            objFrmAddStudent.WindowState = FormWindowState.Normal;
         }
     }
 }

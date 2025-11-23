@@ -39,50 +39,47 @@ namespace StudentManager
             // 
             // txtLoginId
             // 
-            this.txtLoginId.Location = new System.Drawing.Point(353, 162);
-            this.txtLoginId.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginId.Location = new System.Drawing.Point(265, 130);
             this.txtLoginId.Name = "txtLoginId";
-            this.txtLoginId.Size = new System.Drawing.Size(132, 25);
+            this.txtLoginId.Size = new System.Drawing.Size(100, 21);
             this.txtLoginId.TabIndex = 0;
             this.txtLoginId.Text = "1001";
             this.txtLoginId.TextChanged += new System.EventHandler(this.txtLoginId_TextChanged);
+            this.txtLoginId.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginId_KeyDown);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(284, 166);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(213, 133);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 1;
             this.label1.Text = "帐号：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(284, 241);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(213, 193);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.Size = new System.Drawing.Size(41, 12);
             this.label2.TabIndex = 3;
             this.label2.Text = "密码：";
             // 
             // txtLoginPwd
             // 
-            this.txtLoginPwd.Location = new System.Drawing.Point(353, 238);
-            this.txtLoginPwd.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLoginPwd.Location = new System.Drawing.Point(265, 190);
             this.txtLoginPwd.Name = "txtLoginPwd";
-            this.txtLoginPwd.Size = new System.Drawing.Size(132, 25);
+            this.txtLoginPwd.Size = new System.Drawing.Size(100, 21);
             this.txtLoginPwd.TabIndex = 2;
             this.txtLoginPwd.Text = "12345";
             this.txtLoginPwd.UseSystemPasswordChar = true;
+            this.txtLoginPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLoginPwd_KeyDown);
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(287, 339);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogin.Location = new System.Drawing.Point(215, 271);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 29);
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
             this.btnLogin.Text = "登录";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -90,10 +87,9 @@ namespace StudentManager
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(460, 339);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
+            this.btnClose.Location = new System.Drawing.Point(345, 271);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(100, 29);
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "退出";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -101,16 +97,15 @@ namespace StudentManager
             // 
             // FrmUserLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtLoginPwd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtLoginId);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUserLogin";
             this.Text = "FrmUserLonin";
             this.ResumeLayout(false);

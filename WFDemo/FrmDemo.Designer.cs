@@ -88,6 +88,7 @@ namespace StudentManager
             this.btnAddStudent.TabIndex = 5;
             this.btnAddStudent.Text = "添加学生";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // FrmDemo
             // 

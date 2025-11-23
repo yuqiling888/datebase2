@@ -16,5 +16,10 @@ namespace StudentManager
         {
             InitializeComponent();
         }
+
+        private void AddStudent_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FrmDemo.objFrmAddStudent = null;
+        }
     }
 }
