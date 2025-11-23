@@ -102,6 +102,7 @@ namespace StudentManager
             this.Controls.Add(this.lblnfo);
             this.Name = "FrmDemo";
             this.Text = "测试前台代码和后台代码分离";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDemo_FormClosing);
             this.Load += new System.EventHandler(this.FrmDemo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

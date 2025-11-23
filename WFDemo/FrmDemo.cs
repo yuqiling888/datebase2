@@ -66,5 +66,16 @@ namespace StudentManager
                 objFrmAddStudent.Activate();    //激活这个实体，即此时为最小化状态
             objFrmAddStudent.WindowState = FormWindowState.Normal;
         }
+
+        private void FrmDemo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("确认退出吗", "退出询问",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(result!=DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
+
+        }
     }
 }
