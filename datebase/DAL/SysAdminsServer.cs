@@ -26,7 +26,7 @@ namespace DAL
             string sql = "select AdminName from Admins Where LoginId={0} and LoginPwd='{1}'";
             sql = string.Format(sql, objAdmin.LoginId, objAdmin.LoginpPwd);
             //从数据库查询
-            SqlDataReader ObjReader = SQLHelper.GetRead(sql);
+            SqlDataReader ObjReader = SQLHelper.GetReader(sql);
             if (ObjReader.Read())
             {
                 objAdmin.AdminName = ObjReader["AdminName"].ToString();

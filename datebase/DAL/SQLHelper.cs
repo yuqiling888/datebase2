@@ -69,7 +69,7 @@ namespace DAL
         /// 返回一个结果集
         /// </summary>
         /// <param name="Sql"></param>
-        public static SqlDataReader GetRead(string Sql)
+        public static SqlDataReader GetReader(string Sql)
         {
             SqlConnection conn = new SqlConnection(connString);
             SqlCommand cmd = new SqlCommand(Sql, conn);

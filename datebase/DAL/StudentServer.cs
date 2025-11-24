@@ -61,7 +61,7 @@ namespace DAL
             string sql = "select StudentName,Gender,Birthday,StudentIdNo,Age,PhoneNumber,StudentAddress,ClassId from Students where StudentId={0}";
             sql = string.Format(sql, StudentId);
             //执行查询
-            SqlDataReader ObjRdead =SQLHelper.GetRead(sql);
+            SqlDataReader ObjRdead =SQLHelper.GetReader(sql);
             Students Objstudent = null;
             //读取数据
             if (ObjRdead.Read())
@@ -84,7 +84,7 @@ namespace DAL
         public List<Students> GetAllStudents()
         {
             string sql = "select StudentName,Gender,Birthday,StudentIdNo,Age,PhoneNumber,StudentAddress,ClassId from Students";
-            SqlDataReader objReader = SQLHelper.GetRead(sql);
+            SqlDataReader objReader = SQLHelper.GetReader(sql);
             List<Students> stuList = new List<Students>();
             while (objReader.Read())
             {
@@ -115,7 +115,7 @@ namespace DAL
             sql += " inner join StudentClass on StudentClass.ClassId=Students.ClassId";
             sql += " inner join StudentScore on Students.StudentId=StudentScore.StudentId";
             //执行查询
-            SqlDataReader ObjRead = SQLHelper.GetRead(sql);
+            SqlDataReader ObjRead = SQLHelper.GetReader(sql);
             //创建扩展实体类集合的对象
             List<StudentExt> ObjListExt = new List<StudentExt>();
 
@@ -150,7 +150,7 @@ namespace DAL
             sql += " inner join StudentClass on StudentClass.ClassId=Students.ClassId";
             sql += " inner join StudentScore on Students.StudentId=StudentScore.StudentId";
             //执行查询
-            SqlDataReader ObjRead = SQLHelper.GetRead(sql);
+            SqlDataReader ObjRead = SQLHelper.GetReader(sql);
             //创建扩展实体类集合的对象
             List<StudentSimpleExt> ObjListSimpleExt = new List<StudentSimpleExt>();
 
