@@ -20,6 +20,11 @@ namespace DAL
         //private static string connString = "Server=SC-202302051042\\TEW_SQL2019;Database=StudentManageDB;Integrated Security=True";
         // private static string connString = "Server=SC-202302051042\\TEW_SQL2019;Initial Catalog=StudentManageDB;Integrated Security=SSPI";
         public static readonly string connString = ConfigurationManager.ConnectionStrings["connString"].ToString();
+        /// <summary>
+        /// 查询数据库，返回受影响的一个结果
+        /// </summary>
+        /// <param name="sql"></param>
+        /// <returns></returns>
         public static object GetSingleResult(string sql)
         {
             //创建连接对像

@@ -46,6 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddStudent - 复制.cs" />
+    <Compile Include="AddStudent - 复制.Designer.cs">
+      <DependentUpon>AddStudent - 复制.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +62,12 @@
     </Compile>
     <Compile Include="FrmDemo.Designer.cs">
       <DependentUpon>FrmDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModifyStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModifyStudent.designer.cs">
+      <DependentUpon>FrmModifyStudent.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmStudentInfo.cs">
       <SubType>Form</SubType>
@@ -79,11 +89,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddStudent - 复制.resx">
+      <DependentUpon>AddStudent - 复制.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDemo.resx">
       <DependentUpon>FrmDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModifyStudent.resx">
+      <DependentUpon>FrmModifyStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmStudentInfo.resx">
       <DependentUpon>FrmStudentInfo.cs</DependentUpon>

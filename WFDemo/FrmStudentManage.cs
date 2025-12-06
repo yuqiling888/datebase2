@@ -82,5 +82,28 @@ namespace StudentManager
         {
             FrmDemo.objFrmStudentManage = null;
         }
+
+        private void buttonAmend_Click(object sender, EventArgs e)
+        {
+            if(this.dataGridViewStudentList.RowCount==0)
+            {
+                MessageBox.Show("没有任何要修改的学员信息","信息提示");
+                return;
+            }
+            if(this.dataGridViewStudentList.CurrentRow==null)
+            {
+                MessageBox.Show("请选中要修改的学员信息", "信息提示");
+                return;
+            }
+            //获取学号
+            string StudentId = this.dataGridViewStudentList.CurrentRow.Cells["StudentId"].Value.ToString();
+            //获取要修改学员的详细信息
+            ExtStudent objStudent = objStudentService.GetStudentByStudentId(StudentId);
+            //显示要修改学员信息的窗口
+
+
+
+
+        }
     }
 }

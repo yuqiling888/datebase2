@@ -127,6 +127,26 @@ namespace DAL
         }
         #endregion
         #region 修改学员
+        /// <summary>
+        /// 修改学员时判断身份证是否和其他学员重复
+        /// </summary>
+        /// <param name="StudentIdNo"></param>
+        /// <param name="StudentId"></param>
+        /// <returns></returns>
+        public bool IsStudentIdNoExisted(string StudentIdNo,string StudentId)
+        {
+            
+            string sql= "select count(*) from Students where StudentIdNo={0} and StudentId<>{1}";
+            sql = string.Format(sql, StudentIdNo, StudentId);
+            int result =Convert.ToInt32( SQLHelper.GetSingleResult(sql));
+            if(result == 1) return true;
+            else return false;
+        }
+        /// <summary>
+        /// 修改学员对象
+        /// </summary>
+        /// <param name="objStudent"></param>
+        /// <returns></returns>
         public int ModifyStudent(Students objStudent)
         {
             StringBuilder SqlBuilder = new StringBuilder();
@@ -137,7 +157,19 @@ namespace DAL
             string sql = string.Format(SqlBuilder.ToString(),
                 objStudent.StudentName, objStudent.Gender, objStudent.Birthday,
                 objStudent.StudentIdNo, objStudent.Age, objStudent.PhoneNumber,
-                objStudent.StudentAddress, objStudent.ClassId,objStudent.CardNo);
+                objStudent.StudentAddress, objStudent.ClassId,objStudent.CardNo,objStudent.StudentId);
+            try
+            {
+                return SQLHelper.Update(sql);
+
+            }
+            catch (SqlException ex)
+            {
+
+                throw new Exception("数据库操作异常，具体原因："+ex.Message);
+            }
+
+
         }
 
         #endregion

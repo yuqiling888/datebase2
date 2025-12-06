@@ -89,6 +89,7 @@ namespace StudentManager
             this.buttonAmend.TabIndex = 3;
             this.buttonAmend.Text = "修改";
             this.buttonAmend.UseVisualStyleBackColor = true;
+            this.buttonAmend.Click += new System.EventHandler(this.buttonAmend_Click);
             // 
             // buttonDelete
             // 
