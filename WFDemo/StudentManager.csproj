@@ -59,6 +59,18 @@
     <Compile Include="FrmDemo.Designer.cs">
       <DependentUpon>FrmDemo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmStudentInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentInfo.Designer.cs">
+      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmStudentManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmStudentManage.Designer.cs">
+      <DependentUpon>FrmStudentManage.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUserLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDemo.resx">
       <DependentUpon>FrmDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentInfo.resx">
+      <DependentUpon>FrmStudentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmStudentManage.resx">
+      <DependentUpon>FrmStudentManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUserLogin.resx">
       <DependentUpon>FrmUserLogin.cs</DependentUpon>
@@ -87,6 +105,10 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="App.config" />
+    <None Include="Properties\DataSources\AddStudent.datasource" />
+    <None Include="Properties\DataSources\FrmDemo.datasource" />
+    <None Include="Properties\DataSources\FrmStudentManage.datasource" />
+    <None Include="Properties\DataSources\FrmUserLogin.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

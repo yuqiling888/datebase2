@@ -34,6 +34,7 @@ namespace StudentManager
             this.lblCurretUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddStudent = new System.Windows.Forms.Button();
+            this.buttonQueryStudent = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblnfo
@@ -90,11 +91,22 @@ namespace StudentManager
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
+            // buttonQueryStudent
+            // 
+            this.buttonQueryStudent.Location = new System.Drawing.Point(229, 13);
+            this.buttonQueryStudent.Name = "buttonQueryStudent";
+            this.buttonQueryStudent.Size = new System.Drawing.Size(75, 23);
+            this.buttonQueryStudent.TabIndex = 6;
+            this.buttonQueryStudent.Text = "查询学生";
+            this.buttonQueryStudent.UseVisualStyleBackColor = true;
+            this.buttonQueryStudent.Click += new System.EventHandler(this.buttonQueryStudent_Click);
+            // 
             // FrmDemo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonQueryStudent);
             this.Controls.Add(this.btnAddStudent);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCurretUser);
@@ -116,6 +128,7 @@ namespace StudentManager
         private System.Windows.Forms.Label lblCurretUser;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.Button buttonQueryStudent;
     }
 }
 

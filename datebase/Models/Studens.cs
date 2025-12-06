@@ -17,5 +17,6 @@ namespace DAL
         public string PhoneNumber { get; set; }
         public string StudentAddress { get; set; }
         public int ClassId { get; set; }
+        public string CardNo { get; set; }
     }
 }

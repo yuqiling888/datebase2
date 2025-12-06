@@ -9,7 +9,7 @@ namespace DAL
     /// <summary>
     /// 组合扩展实体
     /// </summary>
-    public class StudentExt
+    public class StudentExt:Students
     {
         public StudentExt()
         {
